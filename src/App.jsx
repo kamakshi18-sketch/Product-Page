@@ -8,7 +8,7 @@ const App = () => {
   const [showCart,setshowCart]=useState(false)  
   return (
     <div>
-      <Navbar
+      <Navbar 
       cart={cart}
       showCart={showCart}
       setshowCart={setshowCart}
