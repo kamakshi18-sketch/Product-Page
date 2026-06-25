@@ -63,7 +63,7 @@ const products=[
     quantity:0}
 ]
 
-const MainLoading = ({cart, setCart}) => {
+const MainLoading = ({cart, setCart,search}) => {
         const[prodlist,setProdlist]=useState(products)
         function increaseQuantity(id){
             const updatedProducts=prodlist.map((product)=>{
@@ -74,10 +74,11 @@ const MainLoading = ({cart, setCart}) => {
             })
             setProdlist(updatedProducts)
         }
-
-             function addtocart(product){
+        function addtocart(product){
                 setCart([...cart,product])
             }
+                const filteredproduct=products.filter((product)=>product.tittle.toLowerCase().includes(search.toLowerCase()))
+                console.log(filteredproduct)
 
   return (
     <div style={{
@@ -89,7 +90,8 @@ const MainLoading = ({cart, setCart}) => {
         width:"100%"
     }}>
         {
-            prodlist.map((product)=>(
+            // prodlist.map((product)=>(
+               filteredproduct.map((product)=>(
             <div key={product.id} style={{border:"3px solid black",
                 padding:"10px",
                 overflow:"hidden",

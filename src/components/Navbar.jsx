@@ -1,11 +1,16 @@
 import React from 'react'
 
-function Navbar({cart,showCart,setshowCart}){
+function Navbar({cart,showCart,setshowCart,search,setSearch}){
     return(
        <div style={{ display: "flex",justifyContent: "space-between", alignItems: "center", padding: "10px 20px",background: "white"}}>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG6l6BRX8gNfyz5HS1I_cwPEyu4X1yQMCEfrRYa0q5D07px_KO33Pwcyu-&s=10" style={{width: "70px", height: "70px"}}/>
 
-        <input style={{backgroundColor:"white",color:"black", width:"300px", height:"30px", border:"2px black solid", borderRadius:"10px"}}type="text" placeholder='Search for Products..'></input>
+        <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} style={{backgroundColor:"white",color:"black", width:"300px", height:"30px", border:"2px black solid", borderRadius:"10px"}} placeholder='Search for Products..'/>{
+            // filteredproduct.map((product)=>
+            // <div key={product.id}>
+            //     {product.tittle}
+            // </div>)
+        }
         <button onClick={()=>setshowCart(!showCart)}
             style={{
                 border:"black solid 6px",
