@@ -305,7 +305,7 @@ const Form = () => {
         <input 
         type='checkbox' value={terms} onChange={(e) => setTerms(e.target.checked)}
         />
-        {' '}I agree to the Terms & Conditions
+        I agree to the Terms & Conditions
         </label>
         <br/>     
         <br/>  

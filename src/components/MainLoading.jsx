@@ -77,7 +77,7 @@ const MainLoading = ({cart, setCart,search}) => {
         function addtocart(product){
                 setCart([...cart,product])
             }
-                const filteredproduct=products.filter((product)=>product.tittle.toLowerCase().includes(search.toLowerCase()))
+                const filteredproduct=products.filter((product)=>product.tittle?.toLowerCase().includes(search.toLowerCase()))
                 console.log(filteredproduct)
 
   return (

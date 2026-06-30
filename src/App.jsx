@@ -2,22 +2,23 @@ import React from 'react'
 import MainLoading from './components/MainLoading'
 import Navbar from './components/Navbar'
 import { useState } from 'react'
-import Form from './components/Form'
+// import Form from './components/Form'
 // import Input from './components/Input'
 // import Inc from './components/Inc'
 const App = () => {
-  // const [cart,setCart]=useState([])
-  // const [showCart,setshowCart]=useState(false)  
-  // const [search,setSearch]=useState("")
+  const [cart,setCart]=useState([])
+  const [showCart,setshowCart]=useState(false)  
+  const [search,setSearch]=useState("")
   return (
     <div>
-      {/* <Navbar  
+      <Navbar  
       cart={cart}
       showCart={showCart}
       setshowCart={setshowCart}
       search={search}          
       setSearch={setSearch}
       />
+
       {showCart && <div>
         {cart.length===0?(
           <h3>Cart Empty</h3>
@@ -35,10 +36,11 @@ const App = () => {
       cart={cart}
       setCart={setCart}
       search={search}
-      />  */}
-      <Form/>
+      /> 
+      {/* <Form/> */}
        {/* <Inc/>  */}
        {/* <Input/> */}
+       {/* <Navbar/> */}
     </div> 
   )
 }
